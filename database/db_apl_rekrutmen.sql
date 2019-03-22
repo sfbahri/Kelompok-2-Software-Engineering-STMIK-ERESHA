@@ -11,6 +11,96 @@ MySQL - 5.5.5-10.1.21-MariaDB : Database - db_rekrutment
 /*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+/*Table structure for table `employee` */
+
+DROP TABLE IF EXISTS `employee`;
+
+CREATE TABLE `employee` (
+  `id` int(11) DEFAULT NULL,
+  `kode` varchar(100) DEFAULT NULL,
+  `nama` varchar(100) DEFAULT NULL,
+  `tempat_lahir` varchar(100) DEFAULT NULL,
+  `tgl_lahir` date DEFAULT NULL,
+  `nohp` varchar(20) DEFAULT NULL,
+  `email` varchar(100) DEFAULT NULL,
+  `agama` int(10) DEFAULT '0',
+  `no_ktp` varchar(17) DEFAULT NULL,
+  `alamat` text,
+  `kode_pos` varchar(10) DEFAULT NULL,
+  `pendidikan_terakhir` int(10) DEFAULT NULL,
+  `foto` varchar(255) DEFAULT NULL,
+  `nama_ayah` varchar(100) DEFAULT NULL,
+  `nama_ibu` varchar(100) DEFAULT NULL,
+  `pekerjaan_ayah` varchar(100) DEFAULT NULL,
+  `pekerjaan_ibu` varchar(100) DEFAULT NULL,
+  `is_deleted` int(1) DEFAULT '0',
+  `created_by` varchar(100) DEFAULT NULL,
+  `created_at` datetime DEFAULT NULL,
+  `updated_by` varchar(100) DEFAULT NULL,
+  `updated_at` datetime DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+/*Data for the table `employee` */
+
+/*Table structure for table `employee_lainnya` */
+
+DROP TABLE IF EXISTS `employee_lainnya`;
+
+CREATE TABLE `employee_lainnya` (
+  `id` int(11) DEFAULT NULL,
+  `kode_employee` varchar(100) DEFAULT NULL,
+  `punya_keluarga_disini` int(1) DEFAULT '0',
+  `gaji_yang_diharapkan` varchar(100) DEFAULT NULL,
+  `yakin_data_benar` int(1) DEFAULT '0',
+  `is_deleted` int(1) DEFAULT '0'
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+/*Data for the table `employee_lainnya` */
+
+/*Table structure for table `employee_pendidikan` */
+
+DROP TABLE IF EXISTS `employee_pendidikan`;
+
+CREATE TABLE `employee_pendidikan` (
+  `id` int(11) DEFAULT NULL,
+  `kode_employee` varchar(100) DEFAULT NULL,
+  `nama_sekolah` varchar(100) DEFAULT NULL,
+  `level_pendidikan` int(10) DEFAULT NULL,
+  `tahun_masuk` year(4) DEFAULT NULL,
+  `tahun_keluar` year(4) DEFAULT NULL,
+  `jurusan` varchar(100) DEFAULT NULL,
+  `nilai_ipk` varchar(100) DEFAULT NULL,
+  `is_deleted` int(1) DEFAULT '0',
+  `created_by` varchar(100) DEFAULT NULL,
+  `created_at` datetime DEFAULT NULL,
+  `updated_by` varchar(100) DEFAULT NULL,
+  `updated_at` datetime DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+/*Data for the table `employee_pendidikan` */
+
+/*Table structure for table `employee_riwayat_pekerjaan` */
+
+DROP TABLE IF EXISTS `employee_riwayat_pekerjaan`;
+
+CREATE TABLE `employee_riwayat_pekerjaan` (
+  `id` int(11) DEFAULT NULL,
+  `kode_employee` varchar(50) DEFAULT NULL,
+  `nama_perusahaan` varchar(100) DEFAULT NULL,
+  `jenis_usaha` varchar(100) DEFAULT NULL,
+  `tahun_masuk` year(4) DEFAULT NULL,
+  `tahun_keluar` year(4) DEFAULT NULL,
+  `gaji` varchar(100) DEFAULT NULL,
+  `alasan_keluar` text,
+  `is_deleted` int(1) DEFAULT '0',
+  `created_by` varchar(100) DEFAULT NULL,
+  `created_at` datetime DEFAULT NULL,
+  `updated_by` varchar(100) DEFAULT NULL,
+  `updated_at` datetime DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+/*Data for the table `employee_riwayat_pekerjaan` */
+
 /*Table structure for table `module` */
 
 DROP TABLE IF EXISTS `module`;
