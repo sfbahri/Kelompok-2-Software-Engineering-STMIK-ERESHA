@@ -5,10 +5,10 @@
 Aplikasi ini bertujuan untuk pengambilan nilai tugas , UTS dan UAS di STMIK NUSA MANDIRI.
 Tugas ini Dikerjakan oleh :
 
-    1. Saeful Bahri (181022000007)
-    2. Asep Erlan Maulan (00000000)
-    3. Septi Jehi Ramadhan (181022000051)
-    4. Ade Ripai (181022000014)
+1. Saeful Bahri (Nim 181022000007)
+2. Asep Erlan Maulana (Nim 181022000102)
+3. Septi Jehi Ramadhan (Nim 181022000051)
+4. Ade Ripai (Nim 181022000014)
 
 Aplikasi Rekrutmen karyawan ini meliputi : 
 1. Pelamar mengisi lamaran pada form rekrutmen secara online
