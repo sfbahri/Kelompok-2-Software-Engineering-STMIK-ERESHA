@@ -1,5 +1,5 @@
 # Kelompok-2-Software-Engineering-STMIK-ERESHA
-Aplikasi Rekrutmen Karyawan
+Aplikasi Rekrutmen Karyawan pada PT. ABC
 
 Dikerjakan oleh : 
 
