@@ -1,0 +1,8 @@
+<IfModule mod_rewrite.c>
+RewriteEngine on
+RewriteCond $1 !^(index\.php|images|robots\.txt|css|js|font|woff|ttf|svg|eot|favicon\.ico)
+#RewriteRule ^(.*)$ https://%{HOST_NAME}%{REQUEST_URI} [R=301]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php?/$1 [L]
+</IfModule>
